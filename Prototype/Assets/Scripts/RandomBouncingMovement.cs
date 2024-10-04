@@ -45,7 +45,8 @@ public class RandomBouncingMovement : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         // Check if the object collided with a wall
-        if (collision.gameObject.CompareTag("Wall") || 
+        if (collision.gameObject.CompareTag("Wall") ||
+            collision.gameObject.CompareTag("Door") ||
             collision.gameObject.CompareTag("Ghost"))
         {
             // Reflect the direction based on the normal of the collision
